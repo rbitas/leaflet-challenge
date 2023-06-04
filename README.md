@@ -1,6 +1,8 @@
 # leaflet-challenge
 Homework for DataViz bootcamp
 
+*Note: https://leafletjs.com/examples/geojson/ was used to know the function of pointToLayer and https://leafletjs.com/examples/choropleth/ was used for the legend*
+
 # Create the Earthquake Visualization:
 
 Get your dataset. To do so, follow these steps:
