@@ -20,7 +20,7 @@ function markerSize(magnitude){
 
 function createFeatures(earthquakeData) {
     function onEachFeature(feature, layer) {
-        layer.bindPopup(`<h3>Location: ${feature.properties.place}</h3><hr><p>Date: ${new Date(feature.properties.time)}</p><p>Magnitude: ${feature.properties.mag}</p>`);
+        layer.bindPopup(`<h3>Location: ${feature.properties.place}</h3><hr><p>Depth: ${(feature.geometry.coordinates[2])}</p><p>Magnitude: ${feature.properties.mag}</p>`);
       };
     
     let earthquakes = L.geoJSON(earthquakeData, {
