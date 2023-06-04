@@ -1,7 +1,7 @@
 # leaflet-challenge
 Homework for DataViz bootcamp
 
-*Note: https://leafletjs.com/examples/geojson/ was used to know the function of pointToLayer and https://leafletjs.com/examples/choropleth/ was used for the legend*
+*Note: https://leafletjs.com/examples/geojson/ and https://stackoverflow.com/questions/57286300/show-leaflet-marker-popup-from-outside-of-map-dynamically was used to know the function of pointToLayer and https://leafletjs.com/examples/choropleth/ was used for the legend*
 
 # Create the Earthquake Visualization:
 
