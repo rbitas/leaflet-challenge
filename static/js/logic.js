@@ -10,13 +10,13 @@ function depthColor(depth) {
     else if (depth < 30) return "greenyellow";
     else if (depth < 50) return "yellow";
     else if (depth < 70) return "orange";
-    else if (depth < 90) return "orangered";
+    else if (depth < 90) return "redorange";
     else return "red";
 };
 
 function markerSize(magnitude){
-    return magnitude * 4 
-};
+      return magnitude * 4;
+    }
 
 function createFeatures(earthquakeData) {
     function onEachFeature(feature, layer) {
@@ -30,12 +30,12 @@ function createFeatures(earthquakeData) {
             let earthquakeMarker = {
                 stroke: true,
                 radius: markerSize(feature.properties.mag),
-                fillColor: depthColor(feature.geometry.coordinates[1], feature.geometry.coordinates[0]),
+                fillColor: depthColor(feature.geometry.coordinates[2]),
                 fillOpacity: 0.7,
-                color: "black",
-                weight: 0.5}
+                color: "black"}
             return L.circleMarker(latlng, earthquakeMarker)
         }
+     
 
     
     });
@@ -68,7 +68,8 @@ function createMap(earthquakes) {
         collapsed: false
     }).addTo(myMap);
 
-};
+}
+
 //L.circle([37.09, -95.71],{
    // radius: markerSize(feature.properties.mag),
    // fillColor: depthColor(feature.geometry.coordinates[2]),
