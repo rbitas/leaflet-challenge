@@ -73,11 +73,10 @@ function createMap(earthquakes) {
         let div = L.DomUtil.create("div", "info legend"),
         depth = [-10, 10, 30, 50, 70, 90]
         labels = [];
-        //div.innerHTML += "<h3 style='text-align: center'>Depth</h3>"
 
         for (let i = 0; i < depth.length; i++) {
             div.innerHTML +=
-            '<i style="background:' + depthColor(depth[i] + 1) + '"></i> ' + depth[i] + (depth[i + 1] ? '&ndash;' + depth[i + 1] + '<br>' : '+');
+            '<i style="background:' + depthColor(depth[i] + 1) + '></i> ' + depth[i] + (depth[i + 1] ? '&ndash;' + depth[i + 1] + '<br>' : '+');
           }
           return div;
         };
